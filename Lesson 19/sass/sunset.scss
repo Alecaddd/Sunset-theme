@@ -1,0 +1,156 @@
+/*
+	@package sunsettheme
+*/
+
+/*
+	Variables
+	------------------------------------------------
+*/
+
+$icon-font : 'sunset-icon';
+$body-font : 'Raleway', 'Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;
+
+/*
+	Mixins
+	------------------------------------------------
+*/
+
+@mixin animate ( $attr, $time){
+    -webkit-transition: $attr $time ease;
+    -moz-transition: $attr $time ease;
+    -ms-transition: $attr $time ease;
+    -o-transition: $attr $time ease;
+    transition: $attr $time ease;
+}
+
+@mixin transform( $val ) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+
+/* 
+	Font Icon 
+	------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'sunset-icon';
+    src:    url('../fonts/sunset-icon.eot?dxcjr7');
+    src:    url('../fonts/sunset-icon.eot?dxcjr7#iefix') format('embedded-opentype'),
+        url('../fonts/sunset-icon.ttf?dxcjr7') format('truetype'),
+        url('../fonts/sunset-icon.woff?dxcjr7') format('woff'),
+        url('../fonts/sunset-icon.svg?dxcjr7#sunset-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sunset-icon { 
+	font-family: $icon-font!important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} 
+
+.sunset-audio:before { content: "\e800"; }
+.sunset-chevron-left:before { content: "\e801"; }
+.sunset-chevron-right:before { content: "\e802"; }
+.sunset-close:before { content: "\e803"; }
+.sunset-comment:before { content: "\e804"; }
+.sunset-link:before { content: "\e805"; }
+.sunset-loading:before { content: "\e806"; }
+.sunset-logo:before { content: "\e807"; }
+.sunset-menu:before { content: "\e808"; }
+.sunset-pencil:before { content: "\e809"; }
+.sunset-pics:before { content: "\e80a"; }
+.sunset-search:before { content: "\e80b"; }
+.sunset-share:before { content: "\e80c"; }
+.sunset-tag:before { content: "\e80d"; }
+.sunset-video:before { content: "\e80e"; }
+
+/* 
+	Generic 
+	------------------------------------------------
+*/
+body { font-family: $body-font; }
+
+.background-image { background-position: center center; background-size: cover; background-repeat: no-repeat; }
+
+.table { display: table; width: 100%; height: 100%; 
+	.table-cell { display: table-cell; width: 100%; height: 100%; vertical-align: middle; }
+}
+
+/* 
+	Header 
+	------------------------------------------------
+*/
+.header-container { position: relative; display: block; height: 326px; text-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+
+.site-title { color: #fff; margin: 0; font-size: 80px; }
+.site-description { font-size: 14px; color: #fff; margin-top: 1em; }
+
+.nav-container { position: absolute; bottom: 0; left: 0; right: 0; }
+
+/* 
+	Nav Bar 
+	------------------------------------------------
+*/
+.navbar-sunset { text-align: center; border: none; border-radius: 0; min-height: auto; margin-bottom: 0; background: rgba( 255,255,255,0.1); border-top: 1px solid rgba( 255,255,255,0.1);
+	ul { float: none; }
+	li { float: none; display: inline-block;
+		&.active {
+			a { opacity: 1;
+				&:after { @include transform( translateY(0) ); opacity: 1; }
+			}
+		}
+		&.open {
+			a { opacity: 1; background-color: rgba(0,0,0,0.1)!important;
+				&:after { @include transform( translateY(10px) ); opacity: 0!important; }
+				&:hover,
+				&:focus,
+				&:visited { background-color: rgba(0,0,0,0.1)!important;
+					&:after { @include transform( translateY(10px) ); opacity: 0!important; }
+				}
+			}
+		}
+		a { text-transform: uppercase; color: #fff; font-size: 12px; opacity: 0.7; letter-spacing: 0.05em; background: none; @include animate( opacity, 320ms );
+			&:hover,
+			&:focus,
+			&:visited { background: none; opacity: 1; 
+				&:after { @include transform( translateY(0) ); opacity: 1; }
+			}
+			&:after { content: ''; position: absolute; display: block; left: 15px; right: 15px; bottom: 14px; height: 2px; background: #fff; @include animate( all, 320ms ); opacity: 0; @include transform( translateY(10px) ); }
+		}
+		ul.dropdown-menu { border: 0; border-radius: 0; background: rgba(0,0,0,0.75); 
+			li { display: block; 
+				a {
+					&:hover,
+					&:focus,
+					&:visited { background: rgba(0,0,0,0.25)!important; color: #fff; }
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
