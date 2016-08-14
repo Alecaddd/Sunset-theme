@@ -1,0 +1,90 @@
+/*
+	@package sunsettheme
+*/
+
+/* 
+	Font Icon 
+	------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'sunset-icon';
+    src:    url('../fonts/sunset-icon.eot?o1l4o7');
+    src:    url('../fonts/sunset-icon.eot?o1l4o7#iefix') format('embedded-opentype'),
+        url('../fonts/sunset-icon.ttf?o1l4o7') format('truetype'),
+        url('../fonts/sunset-icon.woff?o1l4o7') format('woff'),
+        url('../fonts/sunset-icon.svg?o1l4o7#sunset-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sunset-icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'sunset-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sunset-twitter:before {
+    content: "\e900";
+}
+.sunset-googleplus:before {
+    content: "\e901";
+}
+.sunset-facebook:before {
+    content: "\e902";
+}
+.sunset-audio:before {
+    content: "\e800";
+}
+.sunset-chevron-left:before {
+    content: "\e801";
+}
+.sunset-chevron-right:before {
+    content: "\e802";
+}
+.sunset-close:before {
+    content: "\e803";
+}
+.sunset-comment:before {
+    content: "\e804";
+}
+.sunset-link:before {
+    content: "\e805";
+}
+.sunset-loading:before {
+    content: "\e806";
+}
+.sunset-logo:before {
+    content: "\e807";
+}
+.sunset-menu:before {
+    content: "\e808";
+}
+.sunset-pencil:before {
+    content: "\e809";
+}
+.sunset-pics:before {
+    content: "\e80a";
+}
+.sunset-search:before {
+    content: "\e80b";
+}
+.sunset-share:before {
+    content: "\e80c";
+}
+.sunset-tag:before {
+    content: "\e80d";
+}
+.sunset-video:before {
+    content: "\e80e";
+}
+
